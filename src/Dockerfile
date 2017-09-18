@@ -6,7 +6,7 @@ LABEL \
 ENV \
     STORM_VERSION=latest
 
-RUN set -eux \
+RUN set -ex \
 
     # Install packages
 
@@ -20,16 +20,18 @@ RUN set -eux \
            ca-certificates \
            libffi \
 
-    # Install dumb-entrypoint
-
-    && curl --location "https://github.com/timonier/dumb-entrypoint/raw/master/bin/installer" | INSTALL_DIRECTORY="/usr/sbin" sh -s install \
-
-    # Install storm
+    # Install emre/storm
 
     && export $(curl "https://raw.githubusercontent.com/timonier/version-lister/release/generated/storm/${STORM_VERSION}" | xargs) \
 
     && pip install \
            "stormssh==${STORM_VERSION}" \
+
+    # Install timonier/dumb-entrypoint
+
+    && curl --location "https://github.com/timonier/dumb-entrypoint/raw/master/src/dumb-entrypoint/installer" | INSTALL_DIRECTORY="/usr/sbin" sh -s -- install \
+    && curl --location "https://github.com/timonier/dumb-entrypoint/raw/master/src/dumb-init/installer" | INSTALL_DIRECTORY="/usr/sbin" sh -s -- install \
+    && curl --location "https://github.com/timonier/dumb-entrypoint/raw/master/src/gosu/installer" | INSTALL_DIRECTORY="/usr/sbin" sh -s -- install \
 
     # Clean
 

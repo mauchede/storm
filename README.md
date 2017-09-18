@@ -14,7 +14,7 @@ sudo chmod +x /usr/local/bin/storm
 Linux users can use the [installer](https://github.com/timonier/storm/blob/master/bin/installer):
 
 ```sh
-curl --location "https://github.com/timonier/storm/raw/master/bin/installer" | sudo sh -s install
+curl --location "https://github.com/timonier/storm/raw/master/bin/installer" | sudo sh -s -- install
 ```
 
 ## Usage
