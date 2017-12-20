@@ -4,13 +4,6 @@ Manage your SSH like a boss
 
 ## Installation
 
-Copy `bin/storm` into your executable folder (like `/usr/local/bin` or `$HOME/bin`):
-
-```sh
-sudo curl --location --output /usr/local/bin/storm "https://github.com/timonier/storm/raw/master/bin/storm"
-sudo chmod +x /usr/local/bin/storm
-```
-
 Linux users can use the [installer](https://github.com/timonier/storm/blob/master/bin/installer):
 
 ```sh

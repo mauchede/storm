@@ -20,4 +20,4 @@ docker run \
     --volume "${HOME}:${HOME}" \
     --volume "${PWD}:${PWD}" \
     --workdir "${PWD}" \
-    "${IMAGE:-timonier/storm}:${TAG:-latest}" storm "$@"
+    "${IMAGE:-timonier/storm}:${TAG:-latest}" "$(basename "$0")" "$@"

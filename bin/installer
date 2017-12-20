@@ -25,7 +25,7 @@ fi
 
 case "$1" in
     install )
-        curl --location --output /usr/local/bin/storm "https://github.com/timonier/storm/raw/master/bin/storm"
+        curl --location --output /usr/local/bin/storm "https://github.com/timonier/storm/raw/master/bin/cmd"
         chmod +x /usr/local/bin/storm
     ;;
 
