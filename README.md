@@ -4,8 +4,6 @@ Manage your SSH like a boss
 
 ## Installation
 
-Linux users can use the [installer](https://github.com/timonier/storm/blob/master/bin/installer):
-
 ```sh
 # Define installation folder
 
